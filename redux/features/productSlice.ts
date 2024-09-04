@@ -1,13 +1,22 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = (IProduct = {
+type IProduct = {
+  _id: "";
+  imgSrc: "";
+  fileKey: "";
+  name: "";
+  price: "";
+  category: "";
+};
+
+const initialState = {
   _id: "",
   imgSrc: "",
   fileKey: "",
   name: "",
   price: "",
   category: "",
-});
+};
 
 export const productSlice = createSlice({
   name: "productSlice",
